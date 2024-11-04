@@ -61,8 +61,19 @@ async function importarDados() {
     });
 
     console.log("Dados importados com sucesso!");
-    db.end();
 }
 
-// Executa a importação de dados
+// Executa a importação de dados a cada 30 segundos
+setInterval(importarDados, 30000);
+
+// Você pode querer conectar ao banco de dados aqui e chamar db.connect() se não estiver conectando em outro lugar
+db.connect(err => {
+    if (err) {
+        console.error('Erro ao conectar ao banco de dados:', err);
+        return;
+    }
+    console.log('Conectado ao banco de dados MySQL!');
+});
+
+// Inicializa a importação uma vez imediatamente
 importarDados();
