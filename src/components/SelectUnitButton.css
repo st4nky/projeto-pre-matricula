@@ -1,0 +1,24 @@
+.select-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto 10px;
+}
+
+#selectUnitButton {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#unitList button {
+    background-color: transparent;
+    color: #6200ea;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+}
